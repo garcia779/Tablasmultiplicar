@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablas de multiplicar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .tabla {
+      background: white;
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 200px;
+    }
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tablas de multiplicar</h1>
+
+  <div class="contenedor">
+    <!-- Las tablas se generan con JavaScript -->
+  </div>
+
+  <script>
+    const contenedor = document.querySelector('.contenedor');
+
+    for (let i = 1; i <= 10; i++) {
+      let tabla = document.createElement('div');
+      tabla.className = 'tabla';
+      tabla.innerHTML = `<h3>Tabla del ${i}</h3>`;
+
+      for (let j = 1; j <= 10; j++) {
+        tabla.innerHTML += `<p>${i} x ${j} = ${i * j}</p>`;
+      }
+
+      contenedor.appendChild(tabla);
+    }
+  </script>
+
+</body>
+</html>
+
